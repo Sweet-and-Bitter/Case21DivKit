@@ -1,0 +1,129 @@
+{
+  "templates": {
+    "button": {
+      "type": "container",
+      "orientation": "overlap",
+      "border": {
+        "corner_radius": 70
+      },
+      "action_animation": {
+        "name": "scale",
+        "start_value": 1.0,
+        "end_value": 0.95,
+        "duration": 300,
+        "interpolator": "ease_in_out"
+      },
+      "background": [
+        {
+          "color": "#4CAF50",
+          "type": "solid"
+        }
+      ],
+      "width": {
+        "type": "match_parent"
+      },
+      "height": {
+        "type": "fixed",
+        "value": 50
+      }
+    }
+  },
+  "card": {
+    "log_id": "login_screen",
+    "states": [
+      {
+        "state_id": 0,
+        "div": {
+          "type": "container",
+          "orientation": "vertical",
+          "width": {
+            "type": "match_parent"
+          },
+          "height": {
+            "type": "match_parent"
+          },
+          "margins": {
+            "top": 20,
+            "bottom": 20,
+            "left": 20,
+            "right": 20
+          },
+          "items": [
+            {
+              "type": "input",
+              "width": {
+                "type": "match_parent"
+              },
+              "height": {
+                "type": "fixed",
+                "value": 50
+              },
+              "margins": {
+                "bottom": 10
+              },
+              "alignment_vertical": "top",
+              "font_size": 16,
+              "font_weight": "medium",
+              "text_color": "#000000",
+              "text_variable": "username", 
+              "hint_text": "Username",
+              "hint_color": "#88000000",
+              "highlight_color": "#1DFF9000",
+              "line_height": 24,
+              "select_all_on_focus": 1,
+              "keyboard_type": "text"
+            },
+            {
+              "type": "input",
+              "width": {
+                "type": "match_parent"
+              },
+              "height": {
+                "type": "fixed",
+                "value": 50
+              },
+              "margins": {
+                "bottom": 20
+              },
+              "alignment_vertical": "top",
+              "font_size": 16,
+              "font_weight": "medium",
+              "text_color": "#000000",
+              "text_variable": "password", 
+              "hint_text": "Password",
+              "hint_color": "#88000000",
+              "highlight_color": "#1DFF9000",
+              "line_height": 24,
+              "select_all_on_focus": 1,
+              "keyboard_type": "text",
+              "is_password": true 
+            },
+            {
+              "type": "button",
+              "margins": {
+                "top": 10
+              },
+              "actions": [
+                {
+                  "log_id": "login",
+                  "url": "div-action://demo_activity?action=login"
+                }
+              ],
+              "items": [
+                {
+                  "type": "text",
+                  "text": "Login",
+                  "text_color": "#FFFFFF",
+                  "font_size": 18,
+                  "font_weight": "bold",
+                  "alignment_horizontal": "center",
+                  "alignment_vertical": "center"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

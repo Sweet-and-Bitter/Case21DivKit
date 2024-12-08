@@ -1,0 +1,33 @@
+name: example
+description: Usage samples, testing space and simple editor.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.17.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  flutter_riverpod: ^2.0.0
+  equatable: ^2.0.5
+
+  divkit:
+    path: ../
+
+dev_dependencies:
+  flutter_lints: ^2.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+    - assets/application/
+
+  fonts:
+    - family: ProtestGuerrilla
+      fonts:
+        - asset: assets/fonts/ProtestGuerrilla/ProtestGuerrilla-Regular.ttf
